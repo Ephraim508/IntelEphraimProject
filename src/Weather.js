@@ -4,7 +4,7 @@ import "./App.css";
 import { MdOutlineMyLocation } from "react-icons/md";
 import { CiTempHigh } from "react-icons/ci";
 import { useSelector } from "react-redux";
-
+import MyMapComponent from "./MyMapComponent";
 const Weather = () => {
   const data = useSelector((state) => state.cityName);
   const navigate = useNavigate(); // Initialize useNavigate
