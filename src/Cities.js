@@ -37,7 +37,7 @@ const Cities = () => {
   };
 
   useEffect(() => {
-    const api = `https://public.opendatasoft.com/api/explore/v2.1/catalog/datasets/geonames-all-cities-with-a-population-1000/records?page=${pageNum}&limit=100`;
+    const api = `https://public.opendatasoft.com/api/explore/v2.1/catalog/datasets/geonames-all-cities-with-a-population-1000/records?limit=100`;
     getData(api);
   }, []);
 
