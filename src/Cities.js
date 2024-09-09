@@ -10,7 +10,6 @@ const Cities = () => {
   const [cities, setCities] = useState([]);
   const [filteredCities, setFilteredCities] = useState([]);
   const [loading, setLoading] = useState(true); // Add loading state
-  const [pageNum, setPageNum] = useState(0);
   const dispatch = useDispatch();
   const navigate = useNavigate(); // Initialize useNavigate
 
