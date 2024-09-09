@@ -2,9 +2,10 @@ import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom"; // Import useNavigate for redirection
 import "./App.css";
 import { MdOutlineMyLocation } from "react-icons/md";
+import MyMapComponent from "./MyMapComponent";
 import { CiTempHigh } from "react-icons/ci";
 import { useSelector } from "react-redux";
-import MyMapComponent from "./MyMapComponent";
+
 const Weather = () => {
   const data = useSelector((state) => state.cityName);
   const navigate = useNavigate(); // Initialize useNavigate
@@ -176,7 +177,7 @@ const Weather = () => {
               <div className="sunrise">
                 <img
                   src="https://res.cloudinary.com/day1peihn/image/upload/v1725797389/drizzle_ptcbll.png"
-                  className="image" alt="sunrise"
+                  className="image"
                 />
                 <h1>Sunset</h1>
                 <p>{temdetails.sunset} PM</p>
@@ -190,7 +191,7 @@ const Weather = () => {
 
               <div className="feels-like">
                 <img
-                  src="https://res.cloudinary.com/day1peihn/image/upload/v1725797389/humidity_dp848m.png" alt="sunset"
+                  src="https://res.cloudinary.com/day1peihn/image/upload/v1725797389/humidity_dp848m.png"
                 />
                 <h1>Feels like: {temdetails.feelslike ? temdetails.feelslike.toFixed(2) : 'N/A'} °C</h1>
               </div>
@@ -207,7 +208,7 @@ const Weather = () => {
                   <p className="weekname">{day.day}</p>
                   <img
                    src="https://res.cloudinary.com/day1peihn/image/upload/v1725797389/drizzle_ptcbll.png"
-                    className="icon-image" alt="temparature-view"
+                    className="icon-image"
                   />
                   <div className="min-max-temp">
                     <div className="min-max-value">
