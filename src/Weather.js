@@ -16,9 +16,7 @@ const Weather = () => {
   const [loading, setLoading] = useState(false); // Loading state
   const [error, setError] = useState(""); // Error state
 
-  const handleInput = (e) => {
-    setCity(e.target.value);
-  };
+ 
 
   const convertTimestampToDate = (timestamp, timezoneOffset) => {
     const date = new Date((timestamp + timezoneOffset) * 1000); // Convert from seconds to milliseconds
@@ -136,7 +134,7 @@ const Weather = () => {
                 </div>
                 <img
                   src="https://res.cloudinary.com/day1peihn/image/upload/v1725797390/clear_swviry.png"
-                  className="temp-image"
+                  className="temp-image" alt="temparature"
                 />
               </div>
 
@@ -168,7 +166,7 @@ const Weather = () => {
               <div className="sunrise">
                 <img
                   src="https://res.cloudinary.com/day1peihn/image/upload/v1725797389/cloud_uvtvbb.png"
-                  className="image"
+                  className="image" alt="sunrise"
                 />
                 <h1>Sunrise</h1>
                 <p>{temdetails.sunrise} AM</p>
@@ -177,7 +175,7 @@ const Weather = () => {
               <div className="sunrise">
                 <img
                   src="https://res.cloudinary.com/day1peihn/image/upload/v1725797389/drizzle_ptcbll.png"
-                  className="image"
+                  className="image" alt="sunset"
                 />
                 <h1>Sunset</h1>
                 <p>{temdetails.sunset} PM</p>
@@ -191,7 +189,7 @@ const Weather = () => {
 
               <div className="feels-like">
                 <img
-                  src="https://res.cloudinary.com/day1peihn/image/upload/v1725797389/humidity_dp848m.png"
+                  src="https://res.cloudinary.com/day1peihn/image/upload/v1725797389/humidity_dp848m.png" alt="feels-like"
                 />
                 <h1>Feels like: {temdetails.feelslike ? temdetails.feelslike.toFixed(2) : 'N/A'} °C</h1>
               </div>
@@ -208,7 +206,7 @@ const Weather = () => {
                   <p className="weekname">{day.day}</p>
                   <img
                    src="https://res.cloudinary.com/day1peihn/image/upload/v1725797389/drizzle_ptcbll.png"
-                    className="icon-image"
+                    className="icon-image" alt="cloudy"
                   />
                   <div className="min-max-temp">
                     <div className="min-max-value">
